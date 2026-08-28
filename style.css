@@ -1,3 +1,4 @@
+
 /* =========================
    RESET
 ========================= */
@@ -48,8 +49,7 @@ a {
 
     --soft-blue: #eef2ff;
 
-    --shadow:
-        0 10px 35px rgba(28, 40, 70, 0.07);
+    --shadow: 0 15px 40px rgba(28, 40, 70, 0.08);
 
     --radius: 18px;
 }
@@ -73,7 +73,7 @@ a {
 }
 
 .section-heading {
-    max-width: 700px;
+    max-width: 720px;
     margin-bottom: 55px;
 }
 
@@ -107,7 +107,8 @@ a {
     top: 0;
     z-index: 1000;
 
-    background: rgba(248, 250, 252, 0.92);
+    background: rgba(248, 250, 252, 0.94);
+
     backdrop-filter: blur(15px);
 
     border-bottom: 1px solid rgba(231, 235, 242, 0.8);
@@ -122,8 +123,8 @@ a {
 }
 
 .logo {
-    width: 40px;
-    height: 40px;
+    width: 42px;
+    height: 42px;
 
     display: grid;
     place-items: center;
@@ -135,6 +136,8 @@ a {
 
     font-size: 21px;
     font-weight: 800;
+
+    box-shadow: 0 8px 20px rgba(79, 110, 247, 0.2);
 }
 
 .logo span {
@@ -149,13 +152,15 @@ a {
 
 .nav-links a {
     color: #586477;
+
     font-size: 14px;
     font-weight: 600;
 
     transition: 0.25s ease;
 }
 
-.nav-links a:hover {
+.nav-links a:hover,
+.nav-links a.active {
     color: var(--primary);
 }
 
@@ -176,6 +181,8 @@ a {
 .nav-github:hover {
     border-color: #ccd5ff;
     color: var(--primary);
+
+    transform: translateY(-1px);
 }
 
 
@@ -185,14 +192,23 @@ a {
 
 .hero {
     padding: 105px 0 95px;
-    background: #f8fafc;
+
+    background:
+        radial-gradient(
+            circle at 80% 20%,
+            rgba(79, 110, 247, 0.08),
+            transparent 30%
+        ),
+        #f8fafc;
 }
 
 .hero-container {
     display: grid;
+
     grid-template-columns: 1.05fr 0.95fr;
 
     align-items: center;
+
     gap: 80px;
 }
 
@@ -200,6 +216,7 @@ a {
     max-width: 720px;
 
     font-size: clamp(45px, 6vw, 70px);
+
     line-height: 1.04;
 
     letter-spacing: -3px;
@@ -223,6 +240,7 @@ a {
 
 .hero-buttons {
     display: flex;
+
     gap: 12px;
 
     flex-wrap: wrap;
@@ -255,6 +273,7 @@ a {
 
 .btn-primary {
     background: var(--primary);
+
     color: white;
 
     box-shadow:
@@ -263,6 +282,9 @@ a {
 
 .btn-primary:hover {
     background: var(--primary-dark);
+
+    box-shadow:
+        0 12px 25px rgba(79, 110, 247, 0.28);
 }
 
 .btn-secondary {
@@ -279,12 +301,15 @@ a {
 
 .hero-note {
     display: flex;
+
     align-items: center;
+
     gap: 8px;
 
     margin-top: 24px;
 
     color: #7a8597;
+
     font-size: 13px;
 }
 
@@ -295,6 +320,8 @@ a {
     background: #4caf76;
 
     border-radius: 50%;
+
+    box-shadow: 0 0 0 4px rgba(76, 175, 118, 0.1);
 }
 
 
@@ -320,21 +347,27 @@ a {
     border-radius: 14px;
 
     background: #172033;
+
+    box-shadow:
+        0 20px 45px rgba(23, 32, 51, 0.18);
 }
 
 .window-top {
     height: 45px;
 
     display: flex;
+
     align-items: center;
 
     padding: 0 17px;
 
-    border-bottom: 1px solid rgba(255,255,255,0.07);
+    border-bottom:
+        1px solid rgba(255, 255, 255, 0.07);
 }
 
 .window-dots {
     display: flex;
+
     gap: 6px;
 }
 
@@ -361,6 +394,7 @@ a {
     color: #cbd3e2;
 
     font-family: Consolas, monospace;
+
     font-size: 14px;
 
     line-height: 2;
@@ -413,8 +447,13 @@ a {
     margin-bottom: 20px;
 }
 
+.about-text p:last-child {
+    margin-bottom: 0;
+}
+
 .about-stats {
     display: grid;
+
     grid-template-columns: 1fr 1fr;
 
     gap: 15px;
@@ -429,7 +468,16 @@ a {
 
     border-radius: var(--radius);
 
-    box-shadow: 0 7px 25px rgba(28, 40, 70, 0.04);
+    box-shadow:
+        0 7px 25px rgba(28, 40, 70, 0.04);
+
+    transition: 0.25s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow: var(--shadow);
 }
 
 .stat-card strong {
@@ -477,6 +525,8 @@ a {
     transform: translateY(-5px);
 
     box-shadow: var(--shadow);
+
+    border-color: #d7defb;
 }
 
 .skill-icon {
@@ -484,6 +534,7 @@ a {
     height: 40px;
 
     display: grid;
+
     place-items: center;
 
     margin-bottom: 20px;
@@ -495,6 +546,7 @@ a {
     color: var(--primary);
 
     font-size: 12px;
+
     font-weight: 800;
 }
 
@@ -534,6 +586,7 @@ a {
     color: #667184;
 
     font-size: 11px;
+
     font-weight: 600;
 }
 
@@ -568,6 +621,7 @@ a {
     min-height: 340px;
 
     display: flex;
+
     flex-direction: column;
 
     padding: 30px;
@@ -602,6 +656,7 @@ a {
     display: flex;
 
     justify-content: space-between;
+
     align-items: center;
 
     margin-bottom: 55px;
@@ -611,6 +666,7 @@ a {
     color: #9aa4b5;
 
     font-size: 13px;
+
     font-weight: 700;
 }
 
@@ -618,10 +674,15 @@ a {
     color: var(--primary);
 
     font-size: 12px;
+
     font-weight: 700;
+
+    transition: 0.2s ease;
 }
 
 .project-link:hover {
+    color: var(--primary-dark);
+
     text-decoration: underline;
 }
 
@@ -629,12 +690,15 @@ a {
     color: #9aa4b5;
 
     cursor: default;
+
+    text-decoration: none;
 }
 
 .project-type {
     color: var(--primary);
 
     font-size: 10px;
+
     font-weight: 800;
 
     letter-spacing: 1.5px;
@@ -673,13 +737,19 @@ a {
     display: flex;
 
     justify-content: space-between;
+
     align-items: center;
 
     gap: 50px;
 
     padding: 60px;
 
-    background: #eef2ff;
+    background:
+        linear-gradient(
+            135deg,
+            #eef2ff,
+            #f6f8ff
+        );
 
     border: 1px solid #dfe5ff;
 
@@ -729,6 +799,7 @@ a {
     display: flex;
 
     align-items: center;
+
     justify-content: space-between;
 
     gap: 20px;
@@ -743,6 +814,27 @@ a {
 
 .footer a:hover {
     color: var(--primary);
+}
+
+
+/* =========================
+   REVEAL ANIMATION
+========================= */
+
+.reveal {
+    opacity: 0;
+
+    transform: translateY(18px);
+
+    transition:
+        opacity 0.6s ease,
+        transform 0.6s ease;
+}
+
+.reveal.revealed {
+    opacity: 1;
+
+    transform: translateY(0);
 }
 
 
@@ -777,7 +869,6 @@ a {
 
         align-items: flex-start;
     }
-
 }
 
 
@@ -789,6 +880,7 @@ a {
 
     .nav-github {
         margin-left: auto;
+
         margin-right: 12px;
     }
 
@@ -831,7 +923,6 @@ a {
 
         align-items: flex-start;
     }
-
 }
 
 
@@ -857,20 +948,13 @@ a {
         grid-template-columns: 1fr;
     }
 
-}
-/* =========================
-   REVEAL ANIMATION
-========================= */
+    .code-content {
+        font-size: 12px;
 
-.reveal {
-    opacity: 0;
-    transform: translateY(18px);
-    transition:
-        opacity 0.6s ease,
-        transform 0.6s ease;
-}
+        padding: 22px 17px;
+    }
 
-.reveal.revealed {
-    opacity: 1;
-    transform: translateY(0);
+    .double-indent {
+        padding-left: 35px;
+    }
 }
