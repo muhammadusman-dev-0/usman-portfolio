@@ -1,3 +1,4 @@
+
 // ================= FOOTER YEAR =================
 
 const yearElement = document.getElementById("year");
@@ -14,16 +15,16 @@ if (yearElement) {
 const projects = [
     {
         name: "USMÉRAN",
-        type: "Premium fashion e-commerce platform",
+        type: "Premium fashion e-commerce website",
         description:
-            "A full-stack men's fashion store with a Next.js frontend styled with Tailwind CSS and an Express.js REST API backed by MongoDB.",
+            "A premium men's fashion store with a component-based React frontend styled with Tailwind CSS, and a Node.js and Express server that provides the product API.",
         points: [
             "Product catalog with search, filters and detail pages",
-            "Cart, wishlist and checkout flow with order tracking",
-            "Secure accounts with bcrypt and JWT authentication",
-            "Admin panel to manage products and orders"
+            "Shopping cart, wishlist and checkout flow",
+            "Reusable React components and a fully responsive layout",
+            "REST API endpoints built with Express.js"
         ],
-        tags: ["Next.js", "React", "Tailwind CSS", "Node.js", "Express", "MongoDB", "JWT"],
+        tags: ["HTML", "CSS", "Tailwind CSS", "JavaScript", "React", "Node.js", "Express"],
         github: "",
         live: ""
     },

@@ -863,3 +863,156 @@ a:focus-visible {
         transition: none !important;
     }
 }
+
+
+/* ================= COLOURFUL TOUCHES ================= */
+
+:root {
+    --pink: #db2777;
+    --blue: #2563eb;
+    --teal: #0d9488;
+    --amber: #d97706;
+}
+
+.logo span {
+    color: #c026d3;
+}
+
+/* Hero */
+
+.hero {
+    position: relative;
+    background:
+        radial-gradient(620px 380px at 6% 0%, rgba(244, 114, 182, 0.30), transparent 70%),
+        radial-gradient(720px 440px at 96% 8%, rgba(96, 165, 250, 0.32), transparent 70%),
+        radial-gradient(640px 420px at 58% 112%, rgba(167, 139, 250, 0.30), transparent 70%),
+        radial-gradient(420px 300px at 30% 70%, rgba(45, 212, 191, 0.14), transparent 70%),
+        var(--bg);
+}
+
+.eyebrow {
+    display: inline-block;
+    padding: 7px 16px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, #ede9fe, #fce7f3 60%, #dbeafe);
+    border: 1px solid #ddd3fa;
+    color: #6d28d9;
+    font-size: 0.82rem;
+}
+
+.hero h1 span {
+    background: linear-gradient(90deg, #5b3fd0 0%, #c026d3 50%, #2563eb 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    padding-bottom: 0.08em;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #6d4fe8 0%, #c026d3 100%);
+    box-shadow: 0 8px 20px rgba(192, 38, 211, 0.28);
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #5b3fd0 0%, #a21caf 100%);
+}
+
+.btn-secondary {
+    border-color: #c9bdf0;
+}
+
+.status-dot {
+    background: #22c55e;
+    box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.2);
+}
+
+/* Code window */
+
+.code-window {
+    border-color: #d9cff7;
+    box-shadow:
+        0 30px 70px rgba(139, 92, 246, 0.25),
+        -20px -14px 70px rgba(244, 114, 182, 0.18),
+        20px 20px 70px rgba(96, 165, 250, 0.18);
+}
+
+.window-top {
+    background: linear-gradient(90deg, #ede9fe, #fce7f3 55%, #dbeafe);
+}
+
+.window-dots span:nth-child(1) { background: #fb7185; }
+.window-dots span:nth-child(2) { background: #fbbf24; }
+.window-dots span:nth-child(3) { background: #34d399; }
+
+.purple { color: #9333ea; }
+.green  { color: #059669; }
+.yellow { color: #d97706; }
+
+/* Stats */
+
+.stat-card {
+    border-top-width: 4px;
+}
+
+.stat-card:nth-child(1) { border-top-color: #8b5cf6; }
+.stat-card:nth-child(2) { border-top-color: #ec4899; }
+.stat-card:nth-child(3) { border-top-color: #3b82f6; }
+.stat-card:nth-child(4) { border-top-color: #14b8a6; }
+
+.stat-card:nth-child(1) strong { color: #7c3aed; }
+.stat-card:nth-child(2) strong { color: var(--pink); }
+.stat-card:nth-child(3) strong { color: var(--blue); }
+.stat-card:nth-child(4) strong { color: var(--teal); }
+
+/* Skills */
+
+.soft-section {
+    background: linear-gradient(180deg, #f0eef9 0%, #eef4fd 100%);
+}
+
+.skill-card {
+    border-top: 4px solid #8b5cf6;
+}
+
+.skill-card:nth-child(2) { border-top-color: #3b82f6; }
+.skill-card:nth-child(3) { border-top-color: #14b8a6; }
+.skill-card:nth-child(4) { border-top-color: #ec4899; }
+.skill-card:nth-child(5) { border-top-color: #f59e0b; }
+.skill-card:nth-child(6) { border-top-color: #6366f1; }
+
+/* Coloured tags */
+
+.tags span:nth-child(5n+1),
+.project-tags span:nth-child(5n+1) { background: #ede9fe; color: #5b21b6; }
+
+.tags span:nth-child(5n+2),
+.project-tags span:nth-child(5n+2) { background: #dbeafe; color: #1d4ed8; }
+
+.tags span:nth-child(5n+3),
+.project-tags span:nth-child(5n+3) { background: #fce7f3; color: #be185d; }
+
+.tags span:nth-child(5n+4),
+.project-tags span:nth-child(5n+4) { background: #ccfbf1; color: #0f766e; }
+
+.tags span:nth-child(5n+5),
+.project-tags span:nth-child(5n+5) { background: #fef3c7; color: #b45309; }
+
+/* Projects and contact */
+
+.project-card.featured {
+    background: linear-gradient(135deg, #f3efff 0%, #fdf2f8 48%, #eff6ff 100%);
+    border-color: #d9cff7;
+}
+
+.project-points li::before {
+    background: linear-gradient(135deg, #8b5cf6, #ec4899);
+}
+
+.project-card:nth-child(2) { border-top: 4px solid #3b82f6; }
+.project-card:nth-child(3) { border-top: 4px solid #ec4899; }
+
+.contact-box {
+    background: linear-gradient(135deg, #f0eaff 0%, #fdf0f8 50%, #eaf3ff 100%);
+    border-color: #d9cff7;
+}
